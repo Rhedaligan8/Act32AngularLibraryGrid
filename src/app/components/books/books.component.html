@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIBRO NI RHED</title>
+</head>
+<body>
+  <h1>FICTION AND MOVIE LIBRARY LIST</h1>
+  <div class="thecontainer">
+    <div class="thecontainer__content">
+      <div *ngFor="let book of books" class="thecontainer__content-card">
+        <img [src]="book.image" class="card__Theimage" />
+        <div class="card__content">
+          <h3 class="card__Thetitle">{{ book.bookTitle }}</h3>
+          <p class="card__Theauthor">{{ book.author }}</p>
+          <p class="card__Therating">
+            Rating:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <button class="btn btn-primary" id="btn_avail">Ready for use</button> <br />
+          <button class="btn btn-secondary">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
